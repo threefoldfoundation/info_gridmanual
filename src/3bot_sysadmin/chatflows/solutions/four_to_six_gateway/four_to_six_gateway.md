@@ -17,3 +17,5 @@ Our grid uses IPv6 internally, the problem is not everyone in the world has acce
 4. The reservation will be deployed, the wizard will inform you how to install wireguard and wireguard configuration will be offered for download.
 
 ![Install wireguard](img/four_to_six_success.png)
+
+<!--- to be deleted once link in sdk moved to solution_four_to_six_gateway --->

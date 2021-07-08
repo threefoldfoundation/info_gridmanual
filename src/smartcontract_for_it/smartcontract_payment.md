@@ -1,7 +1,7 @@
 # Reservation of capacity on the grid
 
 Reservations of capacity on the grid now require payments. If the user wishes to
-[reserve some capacity](it_contract.md#reservation), he would register a reservation
+[reserve some capacity](capacity_reservation), he would register a reservation
 to the explorer.
 
 A reservation does not require a direct payment. Instead, the user first reserves

@@ -1,1 +1,0 @@
-> _We believe The TF Token value should not be based on speculation or velocity (usage on public exchanges). Please only buy this token if you believe in the future value of the TF Grid. TFT is meant to be value of exchange on the TF Grid. TFTs are not an investment instrument, TFTs are used to buy and sell IT capacity._

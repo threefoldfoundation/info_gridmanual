@@ -63,3 +63,5 @@ Deploy monitoring solution with Grafana and prometheus and redis
 
 ### Access container via web or ssh
 ![Step20](img/monitoring_20.png)
+
+<!--- to be deleted once link from sdk moved to solution_monitoring.md --->

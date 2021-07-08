@@ -6,9 +6,9 @@
 
 As the first step, you need to get yourself a **ThreeFold Connect** and **3Bot ID**. This can be done by downloading the app on your smartphone and creating your own 3Bot Identity.
 
-Please be aware that this ID will be used as your main digital identity on the Threefold Grid and holds the keys to access every service on the grid. Therefore, it's very important to remember the login data and the seed phrase of your ID. The ThreeFold Connect App will also provide you with an access to your 3Bot Wallet where you can store your Threefold Tokens.
+Please be aware that this ID will be used as your main digital identity on the ThreeFold_Grid and holds the keys to access every service on the grid. Therefore, it's very important to remember the login data and the seed phrase of your ID. The ThreeFold Connect App will also provide you with an access to your 3Bot Wallet where you can store your ThreeFold_Tokens.
 
-> sdk: [Get **ThreeFold Connect App**](threefold_connect_install)
+> [Get **ThreeFold Connect App**](threefold:threefold_connect)
 
 ## Get a 3Bot on Testnet
 
@@ -25,16 +25,7 @@ Once you’ve signed up and deployed a hosted 3Bot successfully, you will be giv
 
 Go to the provided link to launch your 3Bot and login to your new 3Bot admin dashboard by connecting it to your 3Bot ID. You can use the ThreeFold Connect App on your mobile phone to verify your identity.
 
-## Get Testnet TFT (Tokens for IT Capacity)
+## Get TFT (Tokens for IT Capacity)
 
-Once you're logged in to your 3Bot for the first time, a **pre-configured 3Bot Wallet** will be created for you on your hosted 3bot, with an initial balance of **1000 TFT Testnet**.
-
-> These TFTs are not real TFTs, they are only usable on Testnet.
-
-These TFTs can be used to reserve test IT Capacity on top of the TF Grid testnet.
-
-You could also use **third-party testnet stellar wallets** to store your TFT on testnet.
-
-You can also get TFT from our _testnet TFT faucet_ which is a hosted bot that creates your Testnet TFT to be used on testnet.
-
-> sdk: [**Get and Store TFT** on Testnet](testnet_gettft)
+The same TFTs can be used on testnet and on mainnet, there is however a price difference (currently - March 2021 - on testnet the price for capacity is a factor 10 cheaper than on mainnet). 
+Please refer to [Get & Store TFT](mainnet_gettft) section to know more. 

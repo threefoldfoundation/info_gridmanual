@@ -1,8 +1,0 @@
-- [Architecture](architecture.md)
-  - [3Node](architecture_3Node.md)
-  - [Peer2Peer Storage](architecture_storage.md)
-  - [Overlay Network](architecture_network.md)
-  - [Web Gateway](architecture_webgateway)
-  - [Planetary Lan](tf_lan.md)
-  - [0-Container Virtual FS](architecture_flist)
-  - [Compatibility with IT standards](architecture_compatibility.md)

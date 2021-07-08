@@ -17,18 +17,40 @@ Hi! Welcome to the __TF Grid Manual__, the knowledge base for those interested i
 
 - [__Introduction__: what is our peer2peer cloud](peer2peer_cloud_intro)
   - [Grid Intro](grid_intro)
-  - [Farming Intro](farming_intro)
-- [Architecture](architecture)
-   - [3Node](architecture_3node)
-   - [Peer2Peer Storage](architecture_storage)
-   - [Overlay Network](architecture_network)
-   - [Web Gateway](architecture_webgateway)
-   - [Planetary Lan](tf_lan)
-   - [0-Container Virtual FS](architecture_flist)
+  - [Farming Intro](threefold:farming_intro)
+- [Architecture](architecture_overview)
+  - Layers
+    - [Capacity Layer](architecture_layers_capacity)
+    - [Autonomous Layer](architecture_layers_autonomous)
+    - [Experience Layer](architecture_layers_experience)
+  - Functional Breakdown
+    - Compute
+      - [Quantum Safe Compute](archi_qscompute)
+      - [Zero-OS FS](architecture_flist)
+    - Storage
+      - [Quantum Safe Storage](archi_qsstorage)
+      - [Planetary Secure File System](archi_psfs)
+    - Network
+      - [Quantum Safe Network](archi_qsnetwork)
+      - [Web Gateway](archi_webgateway)
+      - [Planetary Secure Network](archi_psnw)
+      - [Web 3.0 Interface](archi_interface)
+    - [Smart Contract for IT](archi_smartcontract4it)  
+    - [3Node](threefold:3node)
+    - [3Bot](threefold:3bot)
+  - [Architecture Benefits](archi_usp)
+    - [Simple](archi_usp_simple)
+    - [Energy Efficient](archi_usp_energy_efficient)
+    - [Compatibility with IT standards](archi_usp_compatible_fs)
+    - [Privacy by Design](archi_usp_private)
+    - [Secure](archi_usp_secure)
+    - [Scalable](archi_usp_scalable)
+    - [Self-healing](archi_usp_selfhealing)
+    - [Low Redundancy](archi_usp_redundant)
+    - [Energy Efficient](archi_usp_energy_efficient)
 - [__Getting Started__](getting_started_all)
 - [__3Bot__ Your Virtual System Administrator](3bot)
 - [__Develop your own solutions__](develop)
 
 
 If you're looking for an introduction to ThreeFold in general, please go to our main [__ThreeFold Wiki__](https://wiki.threefold.io) 
-

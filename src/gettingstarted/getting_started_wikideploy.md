@@ -16,8 +16,8 @@ Follow the steps decribed to [deploy your network](getting_started_network)
 
 ### Publish Wiki
 
-Now that you have a network in place. We could now publish our wiki. To do so we will use the `Publisher` Chat flow
+Now that you have a network in place. We could now publish our wiki. To do so we will use the `Publisher` Chat flow.
 
 
 To start the wizard click the left menu Publisher
-and follow the steps described in the [publisher walkthrough](publisher.md)
+and follow the steps described in the publisher walkthrough on y9our 3Bot.

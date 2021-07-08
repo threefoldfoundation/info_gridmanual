@@ -19,3 +19,5 @@ Then it will start the reservation of your domain
 Finally you will be shown a message that your domain was delegated successfully and will show you which domain to use in the `ns` record you have to create
 
 ![Success](img/success.png)
+
+<!--- to be deleted once all url links from sdk are moved to solution_delegate_domain --->

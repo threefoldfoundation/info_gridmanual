@@ -1,1 +1,1 @@
-!!!include:sdk:solution_storage.md
+!!!include:solution_storage.md

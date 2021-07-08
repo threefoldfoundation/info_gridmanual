@@ -30,7 +30,7 @@ The Flist principle is explained in the introduction architecture section ([here
 
 <img src="img/hub_startpage.png" width="600" alt="Docker converter">
 
-Access to this hub is restricted to people that have a ThreeFold Connect identity. There is a description in the "getting started" section on how to get one of these [here](threefold_connect_install).
+Access to this hub is restricted to people that have a ThreeFold Connect identity. There is a description in the "getting started" section on how to get one of these [here](threefold:threefold_connect).
 
 Login to the hub and you will not only have access to Flists created and uploaded by others but also the ability to create and upload your own. Two principle ways to create (custom) Flists:
 - import docker images from the docker hub

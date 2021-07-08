@@ -3,8 +3,7 @@
 
 Some tutorials to help you getting started
 
-- [Deploy a hugo website](tutorial_hugo_website)
-  - [tutorial_hugo_website_advanced](tutorial_hugo_website_advanced)
+- [Deploy a hugo website](tutorial_hugo_website_advanced)
 - [ssh_connect](ssh_connect)
 - [net_connect_client](net_connect_client)
 

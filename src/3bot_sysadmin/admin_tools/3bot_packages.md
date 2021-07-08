@@ -1,8 +1,8 @@
-# 3Bot Packages 
+# 3Bot Packages
 
 ![packages](img/packages.png)
 
-A package is a module that can be added to your 3Bot to add additional options, features and functionality. On your 3Bot you could access the list of your 3Bot's system, installed and available packages by clicking on '__Packages__' on the sidebar menu.
+A package is a module that can be added to your 3Bot to add additional options, features and functionality. On your 3Bot you could access the list of your 3Bot's system, installed and available packages by clicking on '**Packages**' on the sidebar menu.
 
 ## System Packages
 
@@ -26,9 +26,10 @@ Weblibs makes it possible for assets (images, javascript, css) to be used across
 
 ### TF Grid solutions
 
-The __tfgrid_solutions__ package is a package that imports all the default solutions that the TF Grid provides.
+The **tfgrid_solutions** package is a package that imports all the default solutions that the TF Grid provides.
 
-For example: 
+For example:
+
 - Kubernetes
 - Minio
 - Ubuntu
@@ -36,7 +37,7 @@ For example:
 
 ### Backup
 
-Backup is a system package that takes care of backups for your 3Bot and it's data. 
+Backup is a system package that takes care of backups for your 3Bot and it's data.
 
 ## Installed Packages
 
@@ -54,7 +55,7 @@ The Farm Management package helps you create and manage a TF Grid Farm.
 
 The Marketplace is a package that will host the Marketplace on your 3Bot. The Marketplace consists of extra solutions that you can deploy within a few clicks!
 
-More information about the [Marketplace](threefold_now).
+More information about the [Marketplace](cloud:threefold_now).
 
 ### 3Bot deployer
 
@@ -73,7 +74,6 @@ It has no added value for your 3Bot.
 
 Stellar Stats package powers https://statsdata.threefoldtoken.com/
 It has no added value for your 3Bot.
-
 
 ### Codeserver
 

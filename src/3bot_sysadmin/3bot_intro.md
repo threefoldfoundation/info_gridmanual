@@ -6,7 +6,7 @@ In a dispersed storage system the data gets dispersed in such a way that data wi
 
 ## How is this “Space Algorithm” used by the 3Bot
 
-By nature, a 3Bot is stateless (has no data storage of its own). A 3Bot owns digital currency ( ThreeFold Token or TFT) which the 3Bot could use to reserve raw storage and compute resources on the grid.
+By nature, a 3Bot is stateless (has no data storage of its own). A 3Bot owns digital currency ( ThreeFold_Token or TFT) which the 3Bot could use to reserve raw storage and compute resources on the grid.
 
 ![](https://github.com/Threefoldfoundation/3bot/blob/master/docs/img/3bot%20ecosystem.jpg)
 

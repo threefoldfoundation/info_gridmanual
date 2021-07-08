@@ -1,8 +1,8 @@
-# K8bernetes cluster
+# Kubernetes cluster
 
 ![](img/kubernetes_intro.png)
 
-This primitive allows a user to deploy a kubernetes cluster.
+This primitive allows a user to deploy a Kubernetes cluster.
 
 A cluster must be composed of at least 2 nodes. One master node and any number of
 worker nodes.
@@ -20,6 +20,8 @@ Schema used to define a kubernetes reservation:
 * `master_ips`: If this VM is not the master of the cluster, add the IP address of the master node here.
 * `ssh_keys`: A list of SSH public keys to authorize into the VM. Don't forget to add yours here or you won't be able to reach the node at all.
 * `public_ip`: The reservation ID of the public IP reserved earlier. The ip should be reserved with the same **node_id**
+* `datastore_endpoint`: If this is not an empty string, it will be used as the connection string for an external datastore endpoint for kubernetes state storage
+* `disable_default_ingress`: If true, the kubernetes VM will be started without a default traefik ingress controller.
 
 ### VM Sizes
 
@@ -88,7 +90,7 @@ print("provisioning result")
 print(master.info.result)
 ```
 
-## How to log into your VM after deployement
+## How to log into your VM after deployment
 
 Once the cluster is deployed, you need to connect to one of the nodes and copy the kube-config file.
 

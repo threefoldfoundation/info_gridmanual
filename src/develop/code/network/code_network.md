@@ -40,14 +40,15 @@ pool = zos.pools.get(payment_detail.reservation_id)
 # Beware you have to indicate which pool you use for the resource you add to the network.
 
 # Make sure to set a new port.
-for i, node in enumerate(pool.node_ids):
- if zos.nodes_finder.filter_is_up(node):
-  iprange = f"172.20.{i+10}.0/24"
-  pool_id = 1
-  zos.network.add_node(network, node.node_id , iprange, pool_id)
-  print("Node number: ", i, node.node_id, ":", iprange)
- else:
-  print("Node", node.node_id,"is not up")
+pool_nodes = list(zos.nodes_finder.nodes_by_capacity(pool_id=pool.pool_id))
+
+for i, node in enumerate(pool_nodes):
+    if zos.nodes_finder.filter_is_up(node):
+        iprange = f"172.20.{i+10}.0/24"
+        zos.network.add_node(network, node.node_id , iprange, pool.pool_id)
+        print("Node number: ", i, node.node_id, ":", iprange)
+    else:
+        print("Node", node.node_id,"is not up")
 ```
 
 Please store the list of nodes somewhere for you reference to deploy containers and architectures, or you can write code to store this to a file. All nodes are connected with IPv6 to the internet. If you have IPv6 at home you can create a wireguard configuration to any of the nodes as they all speak IPv6 and any node can act as you private gateway into your overlay network. If you do not have IPv6 at home you need to identify a nodes that has IPv4 capabilities. In this example the nodes in Belgium have a dual-stack and can therefore be used to provide an IPv4 gateway into your overlay network.
@@ -77,18 +78,10 @@ Now that we have built a network workload structure which includes the nodes we 
 ##### 4a. New API, deploy as a workload
 
 ```bash
-# Deploy the network
-zos.workloads.deploy(network)
-```
-
-If the network is composed of different pools / different farmers, you simply loop over the different workloads:
-
-```bash
-# Deploy the network.
-r = zos.reservation_create()
-r.workloads.append(network)
-for nr in network.network_resources:
- zos.workloads.deploy(nr)
+# Deploy the network resources
+wids = []
+for resource in network.network_resources:
+    wids.append(zos.workloads.deploy(resource))
 ```
 
 ##### 4b. The old way of reserving network resources (without expiration date) is still supported but not recommended:

@@ -8,13 +8,13 @@ When deploying an application that needs to retain data, you’ll need to create
 
 A persistent volume (PV) is a piece of storage in the Kubernetes cluster, while a persistent volume claim (PVC) is a request for storage.
 
-![Persistant storage in kubernetes](persistentstorage.png)
+![](img/persistentstorage.png)
 
-PV has three access modes
+PV has three access modes : 
 
-- RWO: Read Write Once. It could only be read/write on one node at any given time
-- RWX: Read Write Many. It could only be read/write on multiple node at the same time
-- ROX: Read Only Many
+- **RWO** : Read Write Once. It could only be read/write on one node at any given time
+- **RWX** : Read Write Many. It could only be read/write on multiple node at the same time
+- **ROX** : Read Only Many
 
 K3s comes with Rancher’s Local Path Provisioner and this enables the ability to create persistent volume claims out of the box using local storage on the respective node.
 StorageClass "local-path": Only support ReadWriteOnce access mode
@@ -35,7 +35,7 @@ volume-test     1/1  Running 0   2m
 
 #### Klipper
 
-K3s comes with [klipper](https://github.com/rancher/klipper-lb). It assigns the IP of the node to the loadBalancer service. This works by using a host port for each service load balancer and setting up iptables to forward the request to the cluster IP.
+K3s comes with [Klipper](https://github.com/rancher/klipper-lb). It assigns the IP of the node to the loadBalancer service. This works by using a host port for each service load balancer and setting up iptables to forward the request to the cluster IP.
 
 This means that klipper could't provision other IP for that we need metalLB
 
@@ -85,17 +85,11 @@ The idea behind the CNI initiative is to create a framework for dynamically conf
 
 ### Benchmark
 
-**Ressources consumption**
-
-![CNI Ressources consumption](ressource_consumption.png)
+**Resources consumption**
 
 **Performance**
 
-![CNI Performance](cniperf.png)
-
 **Network Policies and Encryption**
-
-![Network Policies and Encryption](networkpolicies_encryption.png)
 
 ### Flannel by default
 
@@ -131,4 +125,5 @@ Run K3s with --flannel-backend=none
 
 ## HA :warning: (WIP) :construction_worker:
 
-![k3s ha architecture](ressources/ha/k3s-ha-architecture.svg)
+<!-- ![k3s ha architecture](resources/ha/k3s-ha-architecture.svg) -->
+<!-- Can't find this image -->

@@ -4,8 +4,7 @@
 
 ### Choose 'Create' to Create a New Capacity Pool
 
-<img src="img/3bot_capacity_new_create.png" alt="3bot_capacity_new_create"
-  title="3bot_capacity_new_create" width="703" height="494" />
+![](img/3bot_capacity_new_create.png)
 
 Select __'Create'__ if you have not created any capacity pool before, or if you would like to create a new separate pool from your already existing one. Select __'Extend'__ if you would like to reserve more capacity on one of the pools you have created.
 
@@ -19,7 +18,7 @@ __CU__ stands for __Compute Unit__; it is the amount of data processing power sp
 More precisely, 1 CU corresponds to 1 core and 4 GB of RAM. 
 1 SU corresponds to a storage capacity of 800 GB of HDD plus 40 GB of SSD (definition until end of 2020). 
 
-Feel free to go to [__Grid Concept__](https://wiki.threefold.io/#/grid_concepts?id=some-examples-of-cu-and-su-in-detail) section of TF Grid Wiki to learn more about Cloud Units.
+Feel free to go to [__Grid Concept__](threefold:definitions_concepts) section of TF Grid Wiki to learn more about Cloud Units.
 
 Specify also the __Pools Time-to-live__. 
 Remark: this is a theoretical value. It assumes that the fully reserved capacity is depleted after the indicated number of units and under the condition that the capacity is fully used. In practice, only the capacity that is consumed by deployed IT workloads reduces the counter. 
@@ -35,15 +34,13 @@ Please keep in mind that capacity on testnet is limited. We only listed one 'dem
 
 ![](img/3bot_capacity_new_pay.png)
 Pay for your capacity, either by selecting a preconfigured wallet in the Admin panel or by using a wallet that is configured in your ThreeFold Connect app, by scanning the QR Code (not for testnet). A third option is to do it manually by copying the __Wallet Address__, __Reservation ID (Memo Text)__, and __Total Amount__ you would have to pay for your capacity. 
-Open your Stellar wallet and send the total amount of tokens to the IT Capacity reservation wallet address. This is an example of a payment page from a [Interstellar Wallet](interstellar_wallet.md) on testnet. You could also use a [Solar Wallet](solar_wallet), or any other existing Stellar wallet to pay for your capacity.
+Open your Stellar wallet and send the total amount of tokens to the IT Capacity reservation wallet address. This is an example of a payment page from a [Interstellar Wallet](https://interstellar.exchange/) on testnet. You could also use a [Solar Wallet](https://solarwallet.io/#download), or any other existing Stellar wallet to pay for your capacity.
 
 Once payment is signed for, the payment process starts. 
 
 ### Pay for Your Capacity via Stellar Wallet
 
 ![](img/3bot_capacity_new_payment_process.png)
-
-
 
 Go back to the admin panel page, click __next__ on the previous payment page to check if you have successfuly made the payment via your wallet. The screen would show the above instruction once the payment is successfully made. Please resend the payment via wallet if you did not do it successfully, or [__contact our helpdesk__](https://threefoldfaq.crisp.help/en/) for payment assistance.
 
@@ -55,4 +52,4 @@ Once payment is confirmed, the reserved capacity is added to the list, indicatin
 
  Each capacity pool is named after few digits of auto generated numbers and is always listed on the first page of your __Pools__ submenu. Click on __'Pool Number'__ to see the details of each __capacity pool's workload__. It will take a few minutes after your successful reservation transaction for the details of the active cloud units and active storage units to be properly updated. Please [__contact our helpdesk__](https://threefoldfaq.crisp.help/en/) for any help and assistance in managing your capacity pools.
 
-![](img/capacity_new_pooldetails.png)
+![](img/capacity_new_pooldetails.png) 

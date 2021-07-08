@@ -1,21 +1,4 @@
-# Flist
-
-In Zero-OS, `Flist` is the format used to store containers images. This format is made to provide
-a complete mountable remote filesystem but downloading only the files contents that you actually needs.
-
-In practice, Flist itself is a small database which contains metadata about files and directories and
-file payload are stored on an remote database. You only need to download payload when you need it, this
-dramatically reduce container boot time, bandwidth and disk overhead.
-
-# Hub
-
-We provide a public hub you could use to upload your own Flist or filesystem directly and take
-advantages of Flist out-of-box on Zero-OS. You could convert an existing docker image the same way.
-
-Public hub: [hub.grid.tf](https://hub.grid.tf)
-
-If you want to experiment the hub and features, you could use the [playground hub](https://playground.hub.grid.tf).
-This hub could be reset anytime, don't put sensitive or production code there.
+!!!include:zflist_
 
 # Build your own Flist
 

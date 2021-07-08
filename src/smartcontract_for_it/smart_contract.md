@@ -8,7 +8,7 @@ Each workload gets registered on the TF Grid smartcontract database.
 - [Smart contract details](smartcontract_details)
 - [Capacity pool concept](smartcontract_details)
 
-### workload definitions
+### Workload definitions
 
 - [0-Containers](capacity_container)
 - [Overlay network](capacity_network)
@@ -17,7 +17,7 @@ Each workload gets registered on the TF Grid smartcontract database.
 - [0-DB storage](capacity_0db)
 - [Virtual disk](capacity_vdisk)
 
-### the process
+### The process
 
 ![](img/smart_contract_it_arch.png)
 
@@ -48,6 +48,6 @@ Need to give consensus to check the “IT smart contract” and give their appro
 - run the required processes and again signatures are checked to make sure the workload is pure.
 0 ensures that no person (hacker or IT person) could ever gain access or influence on the execution process.
 
-### details how the smart contract layer works
+### Details how the smart contract layer works
 
-- [smartcontract details](smartcontract_details)
+- [Smartcontract details](smartcontract_details)

@@ -6,15 +6,15 @@ The basic idea is to provide a reliable storage solution that leverage on the cu
 > NOTE: We are discussing a modified version of minio that has be officially released by ThreeFold to have all the feature that is used, and explained in this document. So when we say `minio` we always mean the `Threefold` version. You could find the source code [here](https://github.com/Threefoldtech/minio)
 
 ## Installation tutorial
-Please check a full installation tutorial [here](minio)
+Please check a full installation tutorial [here](cloud:minio)
 
 # Diagrams
 ![Minio Arch](img/minio_arch.png)
 
-## Master/Slave setup
-![Minio Master/Slave](img/minio_master_slave.png)
+## Primary/Secondary setup
+![Minio Primary/Secondary](img/minio_master_slave.png)
 
-This is a `primart/readonly` setup where metadata is replicated to a slave (readonly) node where users can use to read/download objects. Upload is only possible via the primary node.
+This is a `primart/readonly` setup where metadata is replicated to a secondary (readonly) node where users can use to read/download objects. Upload is only possible via the primary node.
 
 # Data flow
 We have a modified version of minio so it could work against our zdb instances. It has been modified to use [0-stor](https://github.com/Threefoldtech/0-stor). `0-stor` could do `replication or distribution` out of the box. Hence files uploaded to this version of minio are split into separate smaller chunks, and distributed across separate instances of `0-DB`. The distribution is done according to the configuration (discussed later).
@@ -65,14 +65,14 @@ M = (((26 * C) + 40) * S/B) + N * 2560 = 6256025600
 
 
 ## Graphical
-Please refer to the [tutorial](tutorial.md) for a full walk through to deploy a fully working minio with master/slave setup and monitoring enabled.
+Please refer to the [tutorial](tutorials) for a full walk through to deploy a fully working minio with primary/secondary setup and monitoring enabled.
 
 ## Programmatically
 Please make sure you understand the graphical method first. Since it explains the generic main steps that you need to build a solution from scratch.
 
 In [this document](https://github.com/Threefoldtech/jumpscaleX_libs/blob/development/JumpscaleLibs/sal/zosv2/readme.md) it explains building "simple" solutions using the API (jumpscale API), including a single node `minio` setup.
 
-For a more complex flow (master/slave) setup please check the [chat flow](https://github.com/Threefoldtech/jumpscaleX_threebot/blob/development/ThreeBotPackages/TF Grid_solutions/TF Grid_solutions/chatflows/minio_deploy.py) code, where it uses the jumpscale API to build a complete minio setup from scratch.
+For a more complex flow (primary/secondary) setup please check the [chat flow](https://github.com/Threefoldtech/jumpscaleX_threebot/blob/development/ThreeBotPackages/TF Grid_solutions/TF Grid_solutions/chatflows/minio_deploy.py) code, where it uses the jumpscale API to build a complete minio setup from scratch.
 
 # Disaster recovery
 ## Monitoring
@@ -80,9 +80,9 @@ Minio provides metrics for prometheus, so you could monitor the health of the in
 
 ## Healing
 ## Reinstalling minio.
-Minio keep some state (metadata) in the container that is pretty important to be able to actually list and download your files back from zdb. Without this meta even if the data is not lost, there is no way to reconstruct your files back. Hence a master/slave setup is recommended. In a master/slave setup you could even lose BOTH your instances (the master and the slave) and still recover your files because minio keep also a transaction log `tlog`. The tlog is another (extra) zdb namespace that is used mainly to synchronize the master and the slave(s) nodes.
+Minio keep some state (metadata) in the container that is pretty important to be able to actually list and download your files back from zdb. Without this meta even if the data is not lost, there is no way to reconstruct your files back. Hence a primary/secondary setup is recommended. In a primary/secondary setup you could even lose BOTH your instances (the primary and the secondary) and still recover your files because minio keep also a transaction log `tlog`. The tlog is another (extra) zdb namespace that is used mainly to synchronize the primary and the secondaries nodes.
 
-Reinstalling any of the minio instances (the master or the slave) with exactly same setup (data shards and tlog shard) will make minio rebuild its local metadata store. It doesn't matter if it's a master or slave instance, they will rerun the tlog to catchup to all the changes in the tlog. Then after they are synched, only the master minio could actually add new transactions to the log, hence the master node is the only node you could upload files to, while all the slaves could be used for "read-only" access.
+Reinstalling any of the minio instances (the primary or the secondary) with exactly same setup (data shards and tlog shard) will make minio rebuild its local metadata store. It doesn't matter if it's a primary or secondary instance, they will rerun the tlog to catchup to all the changes in the tlog. Then after they are synched, only the master minio could actually add new transactions to the log, hence the master node is the only node you could upload files to, while all the secondaries could be used for "read-only" access.
 
 ## Healing routines
 This healing routines make sure that the data distribution is ideal on all the configured zdb nodes. Based on your setup, make sure to run the healer jobs regularly.

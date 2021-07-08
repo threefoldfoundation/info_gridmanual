@@ -1,6 +1,6 @@
 ### Reserve IT capacity by creating a capacity pool
 
-To be able to deploy workloads on the TF Grid, a user first needs to have reserved some IT capacity from a farmer. To do so, a user can create a pool of capacity which contains a certain amount of [cloud units](https://wiki.Threefold.io/#/cloud_units). 
+To be able to deploy workloads on the TF Grid, a user first needs to have reserved some IT capacity from a farmer. To do so, a user can create a pool of capacity which contains a certain amount of [cloud units](threefold:cloud_units). 
 For each workload deployed, a certain amount of cloud units will be deducted from the pool as long as the workloads are alive.
 
 Further details about capacity pool is available at: [Capacity pool](capacity_pool).
